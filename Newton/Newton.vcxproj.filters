@@ -19,6 +19,10 @@
     <ClInclude Include="src\Newton\Log.h">
       <Filter>Newton</Filter>
     </ClInclude>
+    <ClInclude Include="src\Newton\Events\ApplicationEvent.h" />
+    <ClInclude Include="src\Newton\Events\Event.h" />
+    <ClInclude Include="src\Newton\Events\KeyEvent.h" />
+    <ClInclude Include="src\Newton\Events\MouseEvent.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Newton\Application.cpp">
