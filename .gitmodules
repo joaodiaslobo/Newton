@@ -1,0 +1,3 @@
+[submodule "Newton/vendor/spdlog"]
+	path = Newton/vendor/spdlog
+	url = https://github.com/gabime/spdlog
