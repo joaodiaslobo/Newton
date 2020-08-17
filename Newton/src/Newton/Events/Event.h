@@ -1,6 +1,6 @@
 #pragma once
 
-#include "../Core.h"
+#include "Newton/Core.h"
 
 #include <string>
 #include <functional>
@@ -71,4 +71,9 @@ namespace Newton {
 	private:
 		Event& m_Event;
 	};
+
+	inline std::ostream& operator<<(std::ostream& os, const Event& e)
+	{
+		return os << e.ToString();
+	}
 }

@@ -4,6 +4,9 @@
     <Filter Include="Newton">
       <UniqueIdentifier>{004E38C5-ECEF-629B-D5AA-76EFC1EBE9EB}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Newton\Events">
+      <UniqueIdentifier>{E4398A90-50FA-05C7-1935-4F4485B44AA3}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Newton.h" />
@@ -16,13 +19,21 @@
     <ClInclude Include="src\Newton\EntryPoint.h">
       <Filter>Newton</Filter>
     </ClInclude>
+    <ClInclude Include="src\Newton\Events\ApplicationEvent.h">
+      <Filter>Newton\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Newton\Events\Event.h">
+      <Filter>Newton\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Newton\Events\KeyEvent.h">
+      <Filter>Newton\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Newton\Events\MouseEvent.h">
+      <Filter>Newton\Events</Filter>
+    </ClInclude>
     <ClInclude Include="src\Newton\Log.h">
       <Filter>Newton</Filter>
     </ClInclude>
-    <ClInclude Include="src\Newton\Events\ApplicationEvent.h" />
-    <ClInclude Include="src\Newton\Events\Event.h" />
-    <ClInclude Include="src\Newton\Events\KeyEvent.h" />
-    <ClInclude Include="src\Newton\Events\MouseEvent.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Newton\Application.cpp">

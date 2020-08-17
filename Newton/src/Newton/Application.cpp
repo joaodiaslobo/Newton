@@ -1,5 +1,8 @@
 #include "Application.h"
 
+#include "Newton/Events/ApplicationEvent.h"
+#include "Newton/Log.h"
+
 namespace Newton {
 	
 	Application::Application()
@@ -12,6 +15,9 @@ namespace Newton {
 
 	void Application::Run()
 	{
+		WindowResizeEvent e(1280, 720);
+		NEWTON_INFO(e);
+
 		while (true);
 	}
 }
