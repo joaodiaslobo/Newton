@@ -1,9 +1,7 @@
 #pragma once
 
+#include "newtonpch.h"
 #include "Newton/Core.h"
-
-#include <string>
-#include <functional>
 
 namespace Newton {
 
@@ -19,11 +17,11 @@ namespace Newton {
 	enum EventCategory
 	{
 		None = 0,
-		EventCategoryApplication  = BIT(0),
-		EventCategoryInput        = BIT(1),
-		EventCategoryKeyboard     = BIT(2),
-		EventCategoryMouse        = BIT(3),
-		EventCategoryMouseButton  = BIT(4)
+		EventCategoryApplication = BIT(0),
+		EventCategoryInput = BIT(1),
+		EventCategoryKeyboard = BIT(2),
+		EventCategoryMouse = BIT(3),
+		EventCategoryMouseButton = BIT(4)
 	};
 
 #define EVENT_CLASS_TYPE(type) static EventType GetStaticType() { return EventType::##type; }\
@@ -62,11 +60,12 @@ namespace Newton {
 		template<typename T>
 		bool Dispatch(EventFn<T> func)
 		{
-			if(m_Event.GetEventType() == T::GetStaticType)
+			if (m_Event.GetEventType() == T::GetStaticType())
 			{
-				m_Event.m_Handled = func(*(T*)&m_Event)
+				m_Event.m_Handled = func(*(T*)&m_Event);
 				return true;
 			}
+			return false;
 		}
 	private:
 		Event& m_Event;

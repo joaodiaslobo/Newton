@@ -2,8 +2,6 @@
 
 #include "Event.h"
 
-#include <sstream>
-
 namespace Newton {
 
 	class NEWTON_API MouseMovedEvent : public Event

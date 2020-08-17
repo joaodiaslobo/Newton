@@ -1,3 +1,6 @@
 [submodule "Newton/vendor/spdlog"]
 	path = Newton/vendor/spdlog
 	url = https://github.com/gabime/spdlog
+[submodule "Newton/vendor/GLFW"]
+	path = Newton/vendor/GLFW
+	url = https://github.com/TheCherno/glfw

@@ -2,8 +2,6 @@
 
 #include "Event.h"
 
-#include <sstream>
-
 namespace Newton {
 
 	class NEWTON_API WindowResizeEvent : public Event
@@ -43,7 +41,7 @@ namespace Newton {
 		AppTickEvent() {}
 
 		EVENT_CLASS_TYPE(AppTick)
-			EVENT_CLASS_CATEGORY(EventCategoryApplication)
+		EVENT_CLASS_CATEGORY(EventCategoryApplication)
 	};
 
 	class NEWTON_API AppUpdateEvent : public Event
@@ -61,6 +59,6 @@ namespace Newton {
 		AppRenderEvent() {}
 
 		EVENT_CLASS_TYPE(AppRender)
-			EVENT_CLASS_CATEGORY(EventCategoryApplication)
+		EVENT_CLASS_CATEGORY(EventCategoryApplication)
 	};
 }

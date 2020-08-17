@@ -10,6 +10,11 @@ workspace "Newton"
 
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
+IncludeDir = {}
+IncludeDir["GLFW"] = "Newton/vendor/GLFW/include"
+
+include "Newton/vendor/GLFW"
+
 project "Newton"
 	location "Newton"
 	kind "SharedLib"
@@ -17,6 +22,9 @@ project "Newton"
 
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
+
+	pchheader "newtonpch.h"
+	pchsource "Newton/src/newtonpch.cpp"
 
 	files
 	{
@@ -27,7 +35,14 @@ project "Newton"
 	includedirs
 	{
 		"%{prj.name}/src",
-		"%{prj.name}/vendor/spdlog/include"
+		"%{prj.name}/vendor/spdlog/include",
+		"%{IncludeDir.GLFW}"
+	}
+
+	links
+	{
+		"GLFW",
+		"opengl32.lib"
 	}
 
 	filter "system:windows"
